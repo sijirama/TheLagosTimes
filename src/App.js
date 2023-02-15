@@ -9,7 +9,7 @@ function App() {
     //const [loading ] = useContext(LoadingContext)
 
     //WARN: this should be removes after testing the loader animation
-    //NOTE: this can be used to set loader off and on in every other component.
+    //NOTE: this can be used to set loader off and on in every other component
     const [loading, setLoading] = useContext(LoadingContext)
     setLoading(true)
 

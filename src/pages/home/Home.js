@@ -1,9 +1,9 @@
 import React, {useState, useEffect, useContext} from 'react'
 import Header from '../../components/header/Header.js'
 import { LoadingContext } from '../../context/loading.js'
-import {API_KEY} from '../../api/index.js'
-import {NEWS_URL} from '../../api/index.js'
+import {API_KEY, headers , NEWS_URL} from '../../api/index.js'
 import axios from 'axios'    
+import NewsSection from '../../components/newssection/NewsSection.js'
 
 function Home() {
 
@@ -11,35 +11,24 @@ function Home() {
     const [error, setError] = useState([])
     const [loading, setLoading] = useContext(LoadingContext)
 
-    const newsurl = `${NEWS_URL}apikey=${API_KEY}`
-    const fakeapi = "https://jsonplaceholder.typicode.com/posts"
-
     useEffect(() => {
         async function getPost() {
             try{
-            //setLoading(true)
-                const response = await axios.get(fakeapi);
-                setNewsdata(response.data);
-            //setLoading(false)
+                const response = await axios.get("https://api.newscatcherapi.com/v2/latest_headlines?countries=NG&topic=business", {headers});
+                setNewsdata(response.data.articles);
             }catch(error){
                 setError(error.message)
                 console.log(error.message)
             }
         }
-
         getPost();
-
         console.log(newsdata)
         }, []);
 
     return (
         <div className="home-wrapper">
             <Header />
-            {newsdata.map((post, index) => (
-                <div key={index}>
-                {post.title}
-                </div>
-            )  )}
+            <NewsSection data={newsdata} />
         </div>
     )
 }

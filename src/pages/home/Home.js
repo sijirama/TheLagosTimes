@@ -6,28 +6,40 @@ import {NEWS_URL} from '../../api/index.js'
 import axios from 'axios'    
 
 function Home() {
+
     const [newsdata, setNewsdata] = useState([])
     const [error, setError] = useState([])
     const [loading, setLoading] = useContext(LoadingContext)
+
     const newsurl = `${NEWS_URL}apikey=${API_KEY}`
     const fakeapi = "https://jsonplaceholder.typicode.com/posts"
 
     useEffect(() => {
-            setLoading(true)    
+        async function getPost() {
+            try{
+            //setLoading(true)
+                const response = await axios.get(fakeapi);
+                setNewsdata(response.data);
+            //setLoading(false)
+            }catch(error){
+                setError(error.message)
+                console.log(error.message)
+            }
+        }
 
-            axios.get(`${fakeapi}`)
-                .then((response) => {setNewsdata(response.data)})
-                .catch(error => {setError(error)})
+        getPost();
 
-            setLoading(false)
-    },[])
-
-    
-    console.log(newsdata)
+        console.log(newsdata)
+        }, []);
 
     return (
         <div className="home-wrapper">
             <Header />
+            {newsdata.map((post, index) => (
+                <div key={index}>
+                {post.title}
+                </div>
+            )  )}
         </div>
     )
 }

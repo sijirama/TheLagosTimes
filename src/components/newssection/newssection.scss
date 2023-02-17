@@ -6,13 +6,28 @@
     margin-inline: auto;
 }
 
+.posttitle,
+.postexcerpt,
+.postauthor
+{
+    padding: 1rem;
+}
 
+.posttitle h2{
+    font-family: Helvetica;
+    font-weight: 500;
+}
 
 .postmedia img {
-    width: 80%;
+    width: min(50% , 70%);
+    //height: 40%;
     margin-inline: auto;
     display: flex;
     align-items: center;
+}
+.posttitle,
+.postexcerpt{
+    text-align: center;
 }
 
 .postauthor{
@@ -20,5 +35,17 @@
 }
 
 .postauthor p{
-    font-weight: 100;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    font-style: italic;
+    margin: 0 2rem;
+}
+
+.postline{
+    width: 50%;
+    margin: 1rem 0;
+    margin-inline: auto;
+}
+
+.newspost div{
 }

@@ -5,13 +5,26 @@
 }
 
 .app {
-  width: min(100% - 40px , 1000px);
+  //width: min(100% - 40px , 1000px);
   margin-inline: auto;
-  height: 100%;
+  height: 100vh;
   transition: 0.8s;
 }
+
 
 //Typographuy
 //font-family: 'Roboto', sans-serif;
 //font-family: 'Rubik', sans-serif;
 //font-family: 'UnifrakturCook', cursive;
+
+
+@font-face{
+    font-family: 'UnifrakturCook';
+    src: local('UnifrakturCook'),
+    url('./fonts/UnifrakturCook/UnifrakturCook-Bold.ttf') format('truetype')
+}
+@font-face{
+    font-family: 'Rubik';
+    src: local('Rubik'),
+    url('./fonts/Rubik/Rubik-VariableFont_wght.ttf') format('truetype')
+}

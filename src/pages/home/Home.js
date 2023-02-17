@@ -3,6 +3,7 @@ import Header from '../../components/header/Header.js'
 import { LoadingContext } from '../../context/loading.js'
 import {API_KEY, headers , NEWS_URL} from '../../api/index.js'
 import axios from 'axios'    
+import Navbar from '../../components/navbar/Navbar.js'
 import NewsSection from '../../components/newssection/NewsSection.js'
 
 function Home() {
@@ -28,7 +29,8 @@ function Home() {
     return (
         <div className="home-wrapper">
             <Header />
-            <NewsSection data={newsdata} />
+            <Navbar />
+            <NewsSection data={newsdata}/>
         </div>
     )
 }

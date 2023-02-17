@@ -1,11 +1,12 @@
-
 .header-wrapper{
     display:flex;
     justify-content: space-around;
 }
 
 .header-title h1 {
-    font-size: 2.3rem;
+    //font-size: 2.3rem;
+    //NOTE: replce the pixels with rem units
+    font-size: clamp(28px , 16px + 2vw , 40px);
     font-family: 'UnifrakturCook';
     font-weight: 700;
 }

@@ -6,7 +6,7 @@ function NewsSection({ data }) {
   return (
     <div className="newssection">{
 
-        data.map((post, index) => (
+        data.map((post ) => (
             
             <div className="newspost" key={post.id}>
                 <div className="posttitle"> <h2>{post.title}</h2> </div>

@@ -3,7 +3,7 @@ import "./navbar.scss"
 
 function Navbar() {
 
-    const date = "Wednesday 16, Febrary 2023"
+  const date = "Wednesday 16, Febrary 2023"
 
   return (
     <div className="nav">
@@ -11,7 +11,6 @@ function Navbar() {
             {date}
         </h5>
     </div>
-  )
-}
+)}
 
 export default Navbar

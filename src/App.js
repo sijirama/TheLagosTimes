@@ -1,7 +1,9 @@
 import { useContext } from 'react'
 import { LoadingContext } from './context/loading.js'
 import Home from './pages/home/Home.js'
+import Detail from './pages/detail/Detail.js'
 import Loading from './components/loader/loader.js'
+import {Routes , Route} from "react-router-dom"
 
 function App() {
     
@@ -14,11 +16,19 @@ function App() {
     //setLoading(true)
 
     return (
-      !loading? (<div className="app">
-                    <Home />
-                </div>)
-                :
-                (<Loading />)
+      !loading? (
+          <div className="app">
+                <Routes>
+
+
+                    <Route path='/' element = { <Home /> } />
+                    <Route path='/detail/:id' element= { <Detail /> } />
+
+
+                </Routes>
+          </div>
+            ):(
+                <Loading />)
 
     )}
 

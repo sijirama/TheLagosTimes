@@ -1,4 +1,5 @@
-* {
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,12 +12,18 @@
   transition: 0.8s;
 }
 
+//Colour
+//:root{
+//    --background-colour:;
+//    --foregorund-color:;
+//    --font-colour:;
+// }
+
 
 //Typographuy
 //font-family: 'Roboto', sans-serif;
 //font-family: 'Rubik', sans-serif;
 //font-family: 'UnifrakturCook', cursive;
-
 
 @font-face{
     font-family: 'UnifrakturCook';

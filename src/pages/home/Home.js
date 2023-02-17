@@ -1,7 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react'
 import Header from '../../components/header/Header.js'
 import { LoadingContext } from '../../context/loading.js'
-import {API_KEY, headers , NEWS_URL} from '../../api/index.js'
+import { headers  } from '../../api/index.js'
 import axios from 'axios'    
 import Navbar from '../../components/navbar/Navbar.js'
 import NewsSection from '../../components/newssection/NewsSection.js'
@@ -10,7 +10,7 @@ function Home() {
 
     const [newsdata, setNewsdata] = useState([])
     const [error, setError] = useState([])
-    const [loading, setLoading] = useContext(LoadingContext)
+    //const [loading, setLoading] = useContext(LoadingContext)
 
     useEffect(() => {
         async function getPost() {
@@ -24,7 +24,7 @@ function Home() {
         }
         getPost();
         console.log(newsdata)
-        }, []);
+        }, [])// eslint-disable-line react-hooks/exhaustive-deps
 
   return (
         <div className="home-wrapper">

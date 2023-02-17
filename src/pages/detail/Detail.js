@@ -5,7 +5,7 @@ import Navbar from '../../components/navbar/Navbar.js'
 
 function Detail() {
     
-    const [news , setNews] = useState("") // eslint-disable-line no-used-vars
+    const [news , setNews] = useState("") // eslint-disable-line no-unused-vars
     const {id} = useParams()
     
     useEffect(() => {

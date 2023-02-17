@@ -1,6 +1,7 @@
-import React, {useState, useEffect, useContext} from 'react'
+//NOTE: use context was removed, jsyk
+import React, {useState, useEffect} from 'react'
 import Header from '../../components/header/Header.js'
-import { LoadingContext } from '../../context/loading.js'
+//import { LoadingContext } from '../../context/loading.js'
 import { headers  } from '../../api/index.js'
 import axios from 'axios'    
 import Navbar from '../../components/navbar/Navbar.js'
@@ -9,7 +10,10 @@ import NewsSection from '../../components/newssection/NewsSection.js'
 function Home() {
 
     const [newsdata, setNewsdata] = useState([])
-    const [error, setError] = useState([])
+
+    //NOTE: error in useState was removed
+    const [ setError] = useState([])
+
     //const [loading, setLoading] = useContext(LoadingContext)
 
     useEffect(() => {

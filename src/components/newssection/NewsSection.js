@@ -1,5 +1,5 @@
 import React from 'react'
-//import './sewssection.scss'
+import {Link} from "react-router-dom"
 import './newssection.scss'
 
 function NewsSection({ data }) {
@@ -13,6 +13,13 @@ function NewsSection({ data }) {
                 <div className="postexcerpt"> <p>{post.excerpt}</p> </div>
                 {post.media && <div className="postmedia"> <img src={post.media} alt="post media" /> </div> }
                 <div className="postauthor"> <p>{post.author}</p> </div>
+                <div className="postnav">
+                    <p>
+                        <Link to = {`/detail/${post.id}`}>
+                            Read More
+                        </Link>
+                    </p>
+                </div>
                 <hr className="postline" />
             </div>
 

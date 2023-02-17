@@ -26,7 +26,7 @@ function Home() {
         console.log(newsdata)
         }, []);
 
-    return (
+  (
         <div className="home-wrapper">
             <Header />
             <Navbar />

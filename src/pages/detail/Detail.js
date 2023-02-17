@@ -8,20 +8,24 @@ function Detail() {
     const [news , setNews] = useState("")
     const {id} = useParams()
     
+    useEffect(() => {
+        id && getindividualnewspost()
+      }
+    , [id])
 
-
-
-
-
+    const getindividualnewspost = async () => {
+    }
 
   return (
+
       <main>
         <Header/>
         <Navbar />
-        <div>
+        <div className="newspost">
             {id}
         </div>
       </main>
+
   )
 }
 

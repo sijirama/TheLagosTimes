@@ -19,12 +19,8 @@ function App() {
       !loading? (
           <div className="app">
                 <Routes>
-
-
-                    <Route path='/' element = { <Home /> } />
-                    <Route path='/detail/:id' element= { <Detail /> } />
-
-
+                    <Route exact path='/' element={<Home/>} />
+                    <Route path='/detail/:id' element={ <Detail /> } />
                 </Routes>
           </div>
             ):(

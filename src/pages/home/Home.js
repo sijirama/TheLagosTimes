@@ -15,7 +15,7 @@ function Home() {
     useEffect(() => {
         async function getPost() {
             try{
-                const response = await axios.get("https://api.newscatcherapi.com/v2/latest_headlines?countries=NG&topic=business", {headers});
+                const response = await axios.get("https://api.newscatcherapi.com/v2/latest_headlines?countries=NG", {headers});
                 setNewsdata(response.data.articles);
             }catch(error){
                 setError(error.message)
@@ -26,7 +26,7 @@ function Home() {
         console.log(newsdata)
         }, []);
 
-  (
+  return (
         <div className="home-wrapper">
             <Header />
             <Navbar />

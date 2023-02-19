@@ -8,3 +8,4 @@ The Goal of this project is to build a website where you can find quick and corr
 
 ## State
 Paused due to API restrictions (I finished my api access allowance)
+Awaiting feedback from maintainers.

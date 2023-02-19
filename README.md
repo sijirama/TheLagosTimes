@@ -5,3 +5,6 @@ The Lagos Times is a news sharing app that is inspired on the famous The New Yor
 
 ## Goal
 The Goal of this project is to build a website where you can find quick and correct news that is happening in Lagos, Nigeria and even news in Nigeria as a whole. 
+
+## State
+Paused due to API restrictions (I finished my api access allowance)
